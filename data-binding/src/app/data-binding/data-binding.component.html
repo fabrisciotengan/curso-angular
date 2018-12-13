@@ -85,3 +85,40 @@
   </article>
 </section>
 <hr>
+<section>
+  <article>
+    <h3> Two-way Data Binding</h3>
+    <div>
+      <!-- (input) evento sempre que o campo é atualizado 
+      um bind de valor e outro de evento-->
+      <!-- <input type="text" 
+        [value]="nome"
+        (input)="nome = $event.target.value"
+      /> -->
+      <!-- <input type="text" 
+        [ngModel]="nome"
+        (ngModelChange)="nome = $event"
+      /> -->
+      <!-- two-way data binding -->
+      <input type="text" 
+        [(ngModel)]="nome"
+      />
+      <p>
+        Você digitou: {{nome}}
+      </p>
+    </div>
+    <div>
+      <h5>Two-way Data Binding com objeto</h5>
+      <p>Meu nome é {{pessoa.nome}} e tenho {{pessoa.idade}} anos.</p>
+      <input type="text" [(ngModel)]="pessoa.nome" /><br>
+      <input type="text" [(ngModel)]="pessoa.idade" />
+    </div>
+  </article>
+</section>
+<hr>
+<section>
+  <article>
+    <h2>Input/Output properties</h2>
+    <app-curso [nome]="nomeCurso"></app-curso>
+  </article>
+</section>
