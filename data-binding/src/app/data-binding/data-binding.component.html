@@ -122,3 +122,11 @@
     <app-curso [nome]="nomeCurso"></app-curso>
   </article>
 </section>
+<hr>
+<section>
+  <article>
+    <h3>Contador / Evento customizado</h3>
+    <contador valor="10" (mudouValor)="onMudouValor($event)"></contador>
+
+  </article>
+</section>
